@@ -100,6 +100,7 @@ def add_slave_info(
         jvmArgs="-Xms16m -XX:+UseConcMarkSweepGC -Djava.net.preferIPv4Stack=true",
         jnlpArgs="-noReconnect",
         defaultSlave="false",
+        **kwargs
 ):
     slaveInfo = Template(MESOS_SLAVE_INFO_OBJECT).substitute({
          "labelString": labelString,
@@ -120,9 +121,8 @@ def add_slave_info(
          "containerInfo": "containerInfo",
     })
     return make_post(
-        DOCKER_CONTAINER +
-        slaveInfo +
-        MESOS_SLAVE_INFO_ADD
+        DOCKER_CONTAINER + slaveInfo + MESOS_SLAVE_INFO_ADD,
+        **kwargs
     )
 
 
