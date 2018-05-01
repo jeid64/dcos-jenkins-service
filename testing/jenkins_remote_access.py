@@ -142,7 +142,8 @@ def delete_all_jobs(**kwargs):
 
 def make_post(
         post_body,
-        service_name='jenkins'
+        service_name='jenkins',
+        **kwargs
 ):
     """
     :rtype: requests.Response
@@ -162,4 +163,5 @@ def make_post(
         'scriptText',
         log_args=False,
         data={"script": body},
+        **kwargs
     )
