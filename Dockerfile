@@ -53,6 +53,7 @@ COPY conf/jenkins/nodeMonitors.xml "${JENKINS_STAGING}/nodeMonitors.xml"
 
 # add plugins
 RUN /usr/local/bin/install-plugins.sh       \
+  apache-httpcomponents-client-4-api:4.5.5-1.0 \
   blueocean-bitbucket-pipeline:${BLUEOCEAN_VERSION}    \
   blueocean-commons:${BLUEOCEAN_VERSION}    \
   blueocean-config:${BLUEOCEAN_VERSION}     \
