@@ -16,7 +16,7 @@ ARG BLUEOCEAN_VERSION=1.5.0
 ARG JENKINS_STAGING=/usr/share/jenkins/ref/
 ARG MESOS_PLUG_HASH=5216d7ecef0bc8923ff510aec6659e2c7e7611cb
 ARG PROMETHEUS_PLUG_HASH=a347bf2c63efe59134c15b8ef83a4a1f627e3b5d
-ARG STATSD_PLUG_HASH=statsd
+ARG STATSD_PLUG_HASH=6c528a21b7d8118ca44c4674cd919641dee38ccb
 
 # Default policy according to https://wiki.jenkins.io/display/JENKINS/Configuring+Content+Security+Policy
 ENV JENKINS_CSP_OPTS="sandbox; default-src 'none'; img-src 'self'; style-src 'self';"
