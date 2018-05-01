@@ -18,7 +18,7 @@ import jenkins.model.*
 DOCKER_CONTAINER = """
 def containerInfo = new MesosSlaveInfo.ContainerInfo(
                 "DOCKER",
-                "mesosphere/jenkins-dind:0.7.0-alpine",
+                "mesosphere/jenkins-dind:0.7.0-ubuntu",
                 true,
                 false,
                 false,
